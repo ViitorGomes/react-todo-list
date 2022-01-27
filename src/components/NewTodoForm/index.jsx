@@ -15,7 +15,7 @@ export default function index() {
     }
 
     return <NewTaskForm onSubmit={handleSubmit}>
-        <InputWrapper id="taskName" name="taskName" value={name} label="Nome da tafera:" autoComplete="off" isRequired={true} cb={{onChange: e => setName(e.target.value)}}/>
-        <Button type="submit" styleType="active">Criar tarefa</Button>
+        <InputWrapper id="taskName" name="taskName" value={name} label="Todo name:" autoComplete="off" isRequired={true} cb={{onChange: e => setName(e.target.value)}}/>
+        <Button type="submit" styleType="active">Create</Button>
     </NewTaskForm>
 } 

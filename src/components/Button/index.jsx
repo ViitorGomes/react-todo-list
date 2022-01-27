@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, SimpleButton } from './style';
+import { Button } from './style';
 
 export default function index({type = 'button', styleType='active', cb, children}) {
   return <Button

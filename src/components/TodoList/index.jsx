@@ -14,8 +14,8 @@ export default function index() {
      {tasks.map(task => <TodoItem key={task.createdAt}>
        <StatusMark status={task.status}/>
        <P>{task.name}</P>
-       <Button type="button" styleType="warning" cb={{onClick: e => onChangeTaskStatus(task.taskId, "inProgress")}}>Em andamento</Button>
-       <Button type="button" styleType="success" cb={{onClick: e => onChangeTaskStatus(task.taskId, "completed")}}>Completar</Button>
+       <Button type="button" styleType="warning" cb={{onClick: e => onChangeTaskStatus(task.taskId, "inProgress")}}>In progress</Button>
+       <Button type="button" styleType="success" cb={{onClick: e => onChangeTaskStatus(task.taskId, "completed")}}>Complete</Button>
        <SimpleButton onClick={e => onDeleteTask(task.taskId)}><MdDelete/></SimpleButton>
      </TodoItem>)}
   </TodoListWrapper>;
