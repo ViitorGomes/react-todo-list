@@ -5,9 +5,9 @@ import NewTaskForm from '../../components/NewTodoForm'
 import TodoList from '../../components/TodoList'
 import AutoScrollContainer from '../../components/autoScrollContainer'
 import { TaskListProvider } from '../../context/todoContext';
+import PropTypes from 'prop-types'
 
-
-export default function index({themeCb}) {
+function index({themeCb}) {
   return <Dashboard>
       <TaskListProvider>
         <TodoHeader>
@@ -21,3 +21,9 @@ export default function index({themeCb}) {
       </TaskListProvider>
   </Dashboard>;
 }
+
+index.propTypes = {
+  themeCb: PropTypes.func.isRequired
+}
+
+export default index

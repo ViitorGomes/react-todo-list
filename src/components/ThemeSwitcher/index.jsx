@@ -1,7 +1,8 @@
 import { ThemeSwitcher } from "./style"
 import { MdBrightnessLow, MdDarkMode } from "react-icons/md";
+import PropTypes from 'prop-types'
 
-export default function index({cb}) {
+function index({cb}) {
 
     return (
         <ThemeSwitcher onChange={cb}>
@@ -10,3 +11,9 @@ export default function index({cb}) {
         </ThemeSwitcher>
     )
 }
+
+index.propTypes = {
+    cb: PropTypes.func.isRequired
+}
+
+export default index

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import { InputWrapper } from './style';
 import { useState } from 'react';
 
-export default function index({id, name, value, isRequired, autoComplete = "on", label, cb}) {
+function index({id, name, value, isRequired, autoComplete = "on", label, cb}) {
   const [focus, setFocus] = useState(false)
   const [notEmpty, setNotEmpty] = useState(false)
 
@@ -27,10 +27,12 @@ export default function index({id, name, value, isRequired, autoComplete = "on",
   </InputWrapper>;
 }
 
-InputWrapper.prototype = {
+index.propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
     label: PropTypes.string,
 }
+
+export default index
 
